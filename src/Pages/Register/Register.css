@@ -1,0 +1,23 @@
+.register-title {
+    font-size: 24px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  .error-msg {
+    color: red;
+    font-size: 14px;
+  }
+  

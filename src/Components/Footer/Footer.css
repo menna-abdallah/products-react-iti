@@ -1,0 +1,17 @@
+section.footer-section {
+    background: #0c090c;
+    color: white;
+    font-size: larger;
+  }
+  
+  .icon {
+    margin-right: 20px;
+    font-size: 1.4rem;
+  }
+  ul a {
+    color: white;
+  }
+  li{
+    list-style-type: none;
+    margin: 10px;
+  }
