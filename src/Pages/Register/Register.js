@@ -34,15 +34,52 @@ function Register() {
     }
   }, [userInfoErrs]);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUserInfo({
-      ...userInfo,
-      [name]: value,
-    });
-  };
-
-  const handleImageChange = (e) => {
+  
+  // const handleChange(e) =>{
+  //   switch (e.target.name){
+  //     case "name":
+  //       setUserInfo({
+  //      ...userInfo,
+  //         name: e.target.value,
+  //       });
+  //       break;
+  //     case "email":
+  //       setUserInfo({
+  //      ...userInfo,
+  //         email: e.target.value,
+  //       });
+  //       break;
+  //     case "password":
+  //       setUserInfo({
+  //      ...userInfo,
+  //         password: e.target.value,
+  //       });
+  //       break;
+  //     case "confirmPassword":
+  //       setUserInfo({
+    //      ...userInfo,
+    //         confirmPassword: e.target.value,
+    //       });
+    //       break;
+    //     case "image":
+    //       setUserInfo({
+      //      ...userInfo,
+      //         image: e.target.files[0],
+      //       });
+      //       break;
+      //     default:
+      //       break;
+      //   }
+      // }
+      
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setUserInfo({
+          ...userInfo,
+          [name]: value,
+        });
+      };
+      const handleImageChange = (e) => {
     const file = e.target.files[0];
     setUserInfo({
       ...userInfo,
