@@ -10,7 +10,13 @@ const Home = () => {
   const error = useSelector(state => state.products.error);
 
   useEffect(() => {
-    dispatch(fetchProducts());
+    let mounted = true;
+    if (mounted) {
+      dispatch(fetchProducts());
+    }
+    return () => {
+      mounted = false;
+    };
   }, [dispatch]);
 
   if (loading) {
