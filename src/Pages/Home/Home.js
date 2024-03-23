@@ -1,8 +1,25 @@
+import React, { useEffect } from 'react';
 import Card from "../../Shared/Card/Card.js";
-import productsList from "../../productsList.js";
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProducts } from '../store/slices/productSlice';
 
 const Home = () => {
-  const products = productsList;
+  const dispatch = useDispatch();
+  const products = useSelector(state => state.products.products);
+  const loading = useSelector(state => state.products.loading);
+  const error = useSelector(state => state.products.error);
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
   return (
     <div className="container mt-3">
       <div className="row mt-3">
@@ -23,3 +40,4 @@ const Home = () => {
 };
 
 export default Home;
+
