@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import InputCustom from "../../Shared/Input/InputCustome";
-import './Register.css'; // Import CSS file for additional styling
+import './Register.css'; 
+import { useSelector, useDispatch } from "react-redux";
+import {addUserInfo} from "../../Store/slices/formSlice"
+
 
 function Register() {
+  const dispatch = useDispatch();
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [userInfo, setUserInfo] = useState({
     name: "",
@@ -31,8 +35,9 @@ function Register() {
       isFormSubmitted
     ) {
       console.log("request ur api");
+      dispatch(addUserInfo(userInfo));
     }
-  }, [userInfoErrs]);
+  }, [userInfoErrs, isFormSubmitted, dispatch ,userInfo]);
 
   
   // const handleChange(e) =>{

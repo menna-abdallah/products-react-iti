@@ -13,6 +13,9 @@ function NavBar() {
       <Nav.Item>
         <Nav.Link as={NavLink} to="/register" className="text-secondary bg-black ">Register</Nav.Link>
       </Nav.Item>
+      <Nav.Item>
+        <Nav.Link as={NavLink} to="/profile" className="text-secondary bg-black ">profile</Nav.Link>
+      </Nav.Item>
     </Nav>
   );
 }

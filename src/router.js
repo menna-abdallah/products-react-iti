@@ -4,8 +4,10 @@ import Home from "./Pages/Home/Home";
 import Product from "./Pages/Product/Product";
 import Register from "./Pages/Register/Register";
 import NotFound from "./Pages/ErrorPage/NotFound";
+import Profile from "./Pages/Profile/Profile";
 import Navbar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer/Footer";
+
 
 function Layout() {
     return (
@@ -35,6 +37,10 @@ function Layout() {
           element: <Register />,
         },
         {
+          path: "/profile", 
+          element: <Profile />,
+        },
+        {
           path: "*", 
           element: <NotFound />,
         }
@@ -54,6 +60,10 @@ function Layout() {
         {
           path: "/products/:productID", 
           element: <Product></Product>,
+        },
+        {
+          path: "/profile", 
+          element: <Profile />,
         },
         {
           path: "*", 
